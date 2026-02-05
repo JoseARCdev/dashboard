@@ -12,11 +12,11 @@
         <aside class="sidebar">
             <h2 class="logo">Dashboard</h2>
             <nav class="nav">
-                <a href="" class="nav-link active">Overview</a>
-                <a href="" class="nav-link">Continentes</a>
-                <a href="" class="nav-link">Top Países</a>
-                <a href="" class="nav-link">Idiomas</a>
-                <a href="" class="nav-link">Acerca</a>
+                <a href="" class="nav-link active" data-view="overview">Overview</a>
+                <a href="" class="nav-link" data-view="continents">Continentes</a>
+                <a href="" class="nav-link" data-view="top">Top Países</a>
+                <a href="" class="nav-link" data-view="languages">Idiomas</a>
+                <a href="" class="nav-link" data-view="about">Acerca</a>
             </nav>
         </aside>
 
@@ -28,7 +28,7 @@
             </header>
 
             <!--Overview-->
-            <section class="view active-view">
+            <section class="view active-view" data-view="overview">
                 <div class="cards">
                     <div class="card">
                         <h3>Total Países</h3>
@@ -37,7 +37,7 @@
 
                     <div class="card">
                         <h3>Población</h3>
-                        <p>7 000 000 000</p>
+                        <p>7B</p>
                     </div>
                     
                     <div class="card">
@@ -56,7 +56,29 @@
                     <div class="chart-box">Gráfico 2</div>
                 </div>
             </section>
+
+            <section class="view" data-view="continents">
+                <h2>Continentes</h2>
+                <p>Contenido de continentes</p>
+            </section>
+
+            <section class="view" data-view="top">
+                <h2>Top Países</h2>
+                <p>Ranking de países</p>
+            </section>
+
+            <section class="view" data-view="languages">
+                <h2>Idiomas</h2>
+                <p>Distribución de idiomas</p>
+            </section>
+
+            <section class="view" data-view="about">
+                <h2>Acerca del proyecto</h2>
+                <p>Dashboard creado con HTML, CSS y JavaScript.</p>
+            </section>
         </main>
     </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

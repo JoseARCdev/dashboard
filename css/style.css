@@ -59,6 +59,14 @@ body {
   font-weight: 700;
 }
 
+.view {
+  display: none;
+}
+
+.view.active-view {
+  display: block;
+}
+
 /* Overview */
 .cards {
     display: grid;
