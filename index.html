@@ -4,11 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <div class="dashboard">
+        <!--Sidebar-->
+        <aside class="sidebar">
+            <h2 class="logo">Dashboard</h2>
+            <nav class="nav">
+                <a href="" class="nav-link active">Overview</a>
+                <a href="" class="nav-link">Continentes</a>
+                <a href="" class="nav-link">Top Países</a>
+                <a href="" class="nav-link">Idiomas</a>
+                <a href="" class="nav-link">Acerca</a>
+            </nav>
+        </aside>
 
-    <script src="main.js"></script>
+        <!--Main Content-->
+        <main class="main">
+
+            <header class="main-header">
+                <h1>Dashboard de Países</h1>
+            </header>
+
+            <!--Overview-->
+            <section class="view active-view">
+                <div class="cards">
+                    <div class="card">Total Países</div>
+                    <div class="card">Población</div>
+                    <div class="card">Continentes</div>
+                    <div class="card">Idiomas</div>
+                </div>
+    
+                <div class="charts">
+                    <div class="chart-box">Gráfico 1</div>
+                    <div class="chart-box">Gráfico 2</div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
