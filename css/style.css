@@ -54,6 +54,11 @@ body {
     margin-bottom: 2rem;
 }
 
+.main-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
 /* Overview */
 .cards {
     display: grid;
@@ -66,6 +71,19 @@ body {
     background: white;
     padding: 1.5rem;
     border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    font-size: 0.9rem;
+    color: #647486;
+    text-transform: uppercase;
+}
+
+.card p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
 }
 
 .charts {
@@ -79,4 +97,18 @@ body {
   padding: 1rem;
   border-radius: 10px;
   min-height: 250px;
+}
+
+@media(max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        padding: 1rem;
+    }
 }
