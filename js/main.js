@@ -1,3 +1,12 @@
+import { getCountries } from './api.js';
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const countries = await getCountries();
+
+  console.log('Países cargados:', countries);
+  console.log('Total:', countries.length);
+});
+
 const navLinks = document.querySelectorAll('.nav-link');
 const views = document.querySelectorAll('.view');
 
