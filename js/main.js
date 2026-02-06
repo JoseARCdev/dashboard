@@ -1,10 +1,27 @@
 import { getCountries } from './api.js';
+import {
+  getTotalCountries,
+  getWorldPopulation,
+  getUniqueContinents,
+  getTotalLanguages
+} from './stats.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const countries = await getCountries();
 
-  console.log('Países cargados:', countries);
-  console.log('Total:', countries.length);
+  console.log('Total países:', getTotalCountries(countries));
+  console.log(
+    'Población mundial:',
+    getWorldPopulation(countries).toLocaleString()
+  );
+  console.log(
+    'Continentes:',
+    getUniqueContinents(countries)
+  );
+  console.log(
+    'Total idiomas:',
+    getTotalLanguages(countries)
+  );
 });
 
 const navLinks = document.querySelectorAll('.nav-link');
