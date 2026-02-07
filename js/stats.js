@@ -30,3 +30,13 @@ export function getTotalLanguages(countries) {
 
   return languages.size;
 }
+
+export function getPopulationByContinent(countries) {
+  return countries.reduce((acc, country) => {
+    const continent = country.continents?.[0];
+    if (!continent) return acc;
+
+    acc[continent] = (acc[continent] || 0) + country.population;
+    return acc;
+  }, {});
+}

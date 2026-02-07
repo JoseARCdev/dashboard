@@ -3,13 +3,21 @@ import {
   getTotalCountries,
   getWorldPopulation,
   getUniqueContinents,
-  getTotalLanguages
+  getTotalLanguages,
+  getPopulationByContinent
 } from './stats.js';
+
+import { renderPopulationByContinentChart } from './charts.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const countries = await getCountries();
 
   renderOverview(countries);
+
+  const populationByContinent =
+    getPopulationByContinent(countries);
+
+  renderPopulationByContinentChart(populationByContinent);
 });
 
 function renderOverview(countries) {
