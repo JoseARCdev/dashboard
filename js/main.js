@@ -9,20 +9,22 @@ import {
 document.addEventListener('DOMContentLoaded', async () => {
   const countries = await getCountries();
 
-  console.log('Total países:', getTotalCountries(countries));
-  console.log(
-    'Población mundial:',
-    getWorldPopulation(countries).toLocaleString()
-  );
-  console.log(
-    'Continentes:',
-    getUniqueContinents(countries)
-  );
-  console.log(
-    'Total idiomas:',
-    getTotalLanguages(countries)
-  );
+  renderOverview(countries);
 });
+
+function renderOverview(countries) {
+  document.getElementById('totalCountries').textContent =
+    getTotalCountries(countries);
+
+  document.getElementById('worldPopulation').textContent =
+    getWorldPopulation(countries).toLocaleString();
+
+  document.getElementById('totalContinents').textContent =
+    getUniqueContinents(countries).length;
+
+  document.getElementById('totalLanguages').textContent =
+    getTotalLanguages(countries);
+}
 
 const navLinks = document.querySelectorAll('.nav-link');
 const views = document.querySelectorAll('.view');
