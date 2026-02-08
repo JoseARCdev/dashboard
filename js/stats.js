@@ -40,3 +40,14 @@ export function getPopulationByContinent(countries) {
     return acc;
   }, {});
 }
+
+export function getTop10PopulatedCountries(countries) {
+  return countries
+    .slice()
+    .sort((a, b) => b.population - a.population)
+    .slice(0, 10)
+    .map(country => ({
+      name: country.name.common,
+      population: country.population
+    }));
+}

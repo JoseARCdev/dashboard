@@ -4,13 +4,20 @@ import {
   getWorldPopulation,
   getUniqueContinents,
   getTotalLanguages,
-  getPopulationByContinent
+  getPopulationByContinent,
+  getTop10PopulatedCountries
 } from './stats.js';
 
-import { renderPopulationByContinentChart } from './charts.js';
+import { renderPopulationByContinentChart, renderTopCountriesChart } from './charts.js';
+
 
 document.addEventListener('DOMContentLoaded', async () => {
   const countries = await getCountries();
+
+  const topCountries =
+    getTop10PopulatedCountries(countries);
+
+  renderTopCountriesChart(topCountries);
 
   renderOverview(countries);
 
